@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <%= tag('base', :href => 'http://safe-scrubland-5618.herokuapp.com') %>
+  <title>BibSnag</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="navbarwrap">
+  <div class="container_12" id="navbar">
+    <div class="grid_8 logo">
+      <a href="/">
+        <%= image_tag('logo.png') %>
+      </a>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="boldbar"></div>
+</div>
+
+
+<%= yield %>
+
+<div id="footbarwrap">
+    <div id="boldbar"></div>
+    <div class="container_12" id="footbar">
+        <div class="grid_8">
+            <p>&copy; 2013 The BibSnag Team. All rights reserved. Managed by Warut Suksompong (warutsuk "at" mit "dot" edu).</p>
+        </div>
+        <div class="grid_4">
+            <p class="follow">Follow us on Twitter and Facebook!</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>
